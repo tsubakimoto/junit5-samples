@@ -54,7 +54,7 @@ class Builder {
 		// run("junit5-jupiter-extensions", "gradlew", "test");
 
 		// // migration
-		run("junit5-migration-gradle", "gradlew", "test");
+		run("junit5-migration-gradle", "gradlew", "test", "jacocoTestReport");
 		// run("junit5-migration-maven", "mvnw", "--batch-mode", "clean", "test");
 		// run("junit5-multiple-engines", "gradlew", "test");
 
