@@ -4,8 +4,8 @@ jobs:
   linux:
     name: Linux
     runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
+    # permissions:
+    #   pull-requests: write
     steps:
       - uses: actions/checkout@v4
       - name: 'Set up JDK 17'
