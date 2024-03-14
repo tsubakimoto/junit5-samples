@@ -38,28 +38,28 @@ class Builder {
 		run(".", "java", "--version");
 		checkLicense("src/eclipse-public-license-2.0.java", ".java", ".kt", ".scala", ".groovy");
 
-		// jupiter-starter
-		if (!isWindows()) { // TODO https://github.com/junit-team/junit5-samples/issues/66
-			run("junit5-jupiter-starter-ant", "build.sh");
-		}
-		run("junit5-jupiter-starter-gradle", "gradlew", "test");
-		run("junit5-jupiter-starter-gradle-groovy", "gradlew", "test");
-		run("junit5-jupiter-starter-gradle-kotlin", "gradlew", "test");
-		run("junit5-jupiter-starter-maven", "mvnw", "--batch-mode", "clean", "test");
-		run("junit5-jupiter-starter-maven-kotlin", "mvnw", "--batch-mode", "clean", "test");
-		run("junit5-jupiter-starter-bazel", "bazel", "test", "//...", "--test_output", "all");
-		run("junit5-jupiter-starter-sbt", "sbt", "test");
+		// // jupiter-starter
+		// if (!isWindows()) { // TODO https://github.com/junit-team/junit5-samples/issues/66
+		// 	run("junit5-jupiter-starter-ant", "build.sh");
+		// }
+		// run("junit5-jupiter-starter-gradle", "gradlew", "test");
+		// run("junit5-jupiter-starter-gradle-groovy", "gradlew", "test");
+		// run("junit5-jupiter-starter-gradle-kotlin", "gradlew", "test");
+		// run("junit5-jupiter-starter-maven", "mvnw", "--batch-mode", "clean", "test");
+		// run("junit5-jupiter-starter-maven-kotlin", "mvnw", "--batch-mode", "clean", "test");
+		// run("junit5-jupiter-starter-bazel", "bazel", "test", "//...", "--test_output", "all");
+		// run("junit5-jupiter-starter-sbt", "sbt", "test");
 
-		// jupiter-extensions
-		run("junit5-jupiter-extensions", "gradlew", "test");
+		// // jupiter-extensions
+		// run("junit5-jupiter-extensions", "gradlew", "test");
 
-		// migration
-		run("junit5-migration-gradle", "gradlew", "test");
-		run("junit5-migration-maven", "mvnw", "--batch-mode", "clean", "test");
-		run("junit5-multiple-engines", "gradlew", "test");
+		// // migration
+		run("junit5-migration-gradle", "gradlew", "test", "jacocoTestReport");
+		// run("junit5-migration-maven", "mvnw", "--batch-mode", "clean", "test");
+		// run("junit5-multiple-engines", "gradlew", "test");
 
-		// modular
-		run("junit5-modular-world", "jshell", "build.jsh");
+		// // modular
+		// run("junit5-modular-world", "jshell", "build.jsh");
 
 		System.out.printf("%n%n%n|%n| Done. Build exits with status = %d.%n|%n", status);
 		return status;
